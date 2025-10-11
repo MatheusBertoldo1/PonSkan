@@ -1,0 +1,32 @@
+{
+  "name": "ponskan",
+  "version": "1.0.0",
+  "description": "Projeto Integrador - Fatec",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusBertoldo1/PonSkan.git"
+  },
+  "keywords": [
+    "Projeto",
+    "Integrador",
+    "Fatec",
+    "Ponkan"
+  ],
+  "author": "Matheus Bertoldo de Oliveira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MatheusBertoldo1/PonSkan/issues"
+  },
+  "homepage": "https://github.com/MatheusBertoldo1/PonSkan#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql2": "^3.15.2",
+    "node": "^24.10.0",
+    "nodemon": "^3.1.10",
+    "sequelize": "^6.37.7"
+  }
+}
