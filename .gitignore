@@ -1,1 +1,5 @@
 node_modules
+
+#arquivo de compilação do Sass
+main.css
+main.css.map

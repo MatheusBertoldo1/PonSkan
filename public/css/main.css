@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-VariableFont_wght") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --text-color: #394552;
+  --main-color: #fca211;
+  --main-color50: #fca21181;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-landingpage {
+  display: flex;
+  width: 100%;
+  height: 72px;
+  margin: 0;
+}
+
+.logo {
+  width: 150px;
+  height: 100%;
+}
+
+.wrapper-nav-links {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 12px;
+  justify-content: right;
+  align-items: center;
+}
+
+.wrapper-nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 16px;
+  padding: 8px 16px;
+  position: relative;
+  transition: 0.2s;
+}
+
+.wrapper-nav-links a:hover {
+  color: var(--main-color);
+}
+
+.selected-nav-link {
+  color: var(--main-color) !important;
+}
+
+.link_decoration::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.wrapper-nav-links a:nth-child(4) {
+  margin-left: 32px;
+}
+
+.wrapper-nav-links a:nth-child(5) {
+  border-radius: 12px;
+  border: 3px solid var(--main-color50);
+}
+
+/*# sourceMappingURL=style_sass.css.map */

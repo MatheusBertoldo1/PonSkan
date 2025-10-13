@@ -4,7 +4,8 @@
   "description": "Projeto Integrador - Fatec",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start" : "nodemon index.js",
+    "sass": "sass --watch public/css/main.scss:public/css/main.css"
   },
   "repository": {
     "type": "git",
@@ -23,10 +24,14 @@
   },
   "homepage": "https://github.com/MatheusBertoldo1/PonSkan#readme",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
     "mysql2": "^3.15.2",
     "node": "^24.10.0",
     "nodemon": "^3.1.10",
     "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
   }
 }
