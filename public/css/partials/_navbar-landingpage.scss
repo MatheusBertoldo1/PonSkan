@@ -1,20 +1,5 @@
-@font-face {
-    font-family: 'Montserrat'; 
-    src: url('/fonts/Montserrat/Montserrat-VariableFont_wght') format('woff2');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-}
+@use '../abstracts/variables';
 
-:root{
-    --text-color: #394552;
-    --main-color: #fca211;
-    --main-color50: #fca21181;
-}
-
-*{
-    font-family: 'Montserrat', sans-serif;
-}
 .navbar-landingpage{
     display: flex;
     width: 100%;
@@ -25,6 +10,13 @@
 .logo{
     width: 150px;
     height: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo a img{
+    width: 100%;
 }
 
 .wrapper-nav-links{
@@ -39,7 +31,7 @@
 .wrapper-nav-links a{
     text-decoration: none;
     color: var(--text-color);
-    font-size: 16px;
+    font-size: 1rem;
     padding: 8px 16px;
     position: relative;
     transition: .2s;

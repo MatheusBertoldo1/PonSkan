@@ -4,7 +4,7 @@
   "description": "Projeto Integrador - Fatec",
   "main": "index.js",
   "scripts": {
-    "start" : "nodemon index.js",
+    "start": "nodemon index.js",
     "sass": "sass --watch public/css/main.scss:public/css/main.css"
   },
   "repository": {

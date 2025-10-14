@@ -1,1 +1,7 @@
-@import 'partials/_navbar-landingpage';
+@use 'abstracts/config';
+
+@use 'partials/_navbar-landingpage';
+
+@use 'pages/index.scss';
+
+
