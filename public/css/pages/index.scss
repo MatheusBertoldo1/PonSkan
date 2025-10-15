@@ -5,7 +5,7 @@
     min-height: 600px;
     display: flex;
     z-index: 10;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .left_content_header_index{
@@ -38,7 +38,7 @@
 }
 
 .right_content_header_index img{
-    width:  clamp(350px, calc(239.0411px + 30.8219vw), 800px);
+    width:  clamp(360px, calc(276.1644px + 23.2877vw), 700px);
     height: fit-content;
 }
 

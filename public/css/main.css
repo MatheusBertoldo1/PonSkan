@@ -4,9 +4,9 @@ html, body {
 
 body {
   padding-top: 12px;
-  padding-right: clamp(1rem, -0.2273rem + 5.4545vw, 4rem);
+  padding-right: clamp(24px, 6.2466px + 4.9315vw, 96px);
   padding-bottom: 0;
-  padding-left: clamp(1rem, -0.2273rem + 5.4545vw, 4rem);
+  padding-left: clamp(24px, 6.2466px + 4.9315vw, 96px);
   margin: 0;
   overflow-x: hidden;
 }
@@ -99,7 +99,7 @@ body {
   min-height: 600px;
   display: flex;
   z-index: 10;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .left_content_header_index {
@@ -132,7 +132,7 @@ body {
 }
 
 .right_content_header_index img {
-  width: clamp(350px, 239.0411px + 30.8219vw, 800px);
+  width: clamp(360px, 276.1644px + 23.2877vw, 700px);
   height: fit-content;
 }
 

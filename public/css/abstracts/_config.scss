@@ -5,9 +5,9 @@ html, body {
 
 body{
     padding-top: 12px;
-    padding-right: clamp(1rem, -0.2273rem + 5.4545vw, 4rem);
+    padding-right: clamp(24px, calc(6.2466px + 4.9315vw), 96px);
     padding-bottom: 0;
-    padding-left: clamp(1rem, -0.2273rem + 5.4545vw, 4rem);
+    padding-left: clamp(24px, calc(6.2466px + 4.9315vw), 96px);
     margin: 0;
     overflow-x: hidden;
 }
