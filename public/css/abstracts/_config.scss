@@ -1,11 +1,15 @@
 
 html, body {
+    font-size: 100%; 
+}
+
+body{
     padding-top: 12px;
     padding-right: clamp(1rem, -0.2273rem + 5.4545vw, 4rem);
     padding-bottom: 0;
     padding-left: clamp(1rem, -0.2273rem + 5.4545vw, 4rem);
     margin: 0;
-    font-size: 100%;
+    overflow-x: hidden;
 }
 
 @font-face {
