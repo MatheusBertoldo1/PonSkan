@@ -1,9 +1,25 @@
 @use '../abstracts/variables' as var;
 
+// Presets
+.section_title{
+    font-size:  clamp(2rem, calc(1.625rem + 1.6667vw), 3.5rem);
+}
+
+.emphasis{
+    color: var.$main-color;
+    font-weight: 700;
+}
+
+.text_underline{
+    display: inline;
+    text-decoration-line: underline;
+    text-decoration-color: var.$main-color;
+}
+
+// SECTION 01
 .header_index{
     width: 100%;
     display: flex;
-    z-index: 10;
     flex-wrap: nowrap;
 }
 
@@ -26,10 +42,10 @@
 }
 
 .left_content_header_index p{
-    display: flex;
     font-size: clamp(1rem, 0.8977rem + 0.4545vw, 1.25rem);
     color: var.$text-color;
     max-width: 450px;
+    font-weight: 500;
 }
 
 .right_content_header_index{
@@ -45,21 +61,77 @@
     height: fit-content;
 }
 
-.flutter_img{
+// SESSÃO 2
+.agriculture{
     display: flex;
-    justify-content: right;
-    width: 100%;
-    overflow-x: hidden;
+    flex-direction: column;
+    margin-top: 96px;
+    background-color: var.$main-color;
 }
 
-.flutter_img img{
-    transform: translate(130px);
-    width: calc(500px + 15vw);
+.agriculture h1{
+    color: #fff;
+}
+
+.content_agriculture{
+    display: flex;
+}
+.part3 img{
+    width:  clamp(18.75rem, calc(6.25rem + 22.2222vw), 31.25rem);;
+}
+// SECTION 03
+.inovation{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 96px;
+}
+
+
+.inovation::after{
+    content: "";
+    position: absolute;
+    right: 0px;
+    align-self: center;
+    height: 380px;
+    width: 25px;
+    border: 3px solid #919191;
+    border-right: 0;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.container_img_inovation{
+    display: flex;
+    flex-grow: 1;
+}
+
+.container_img_inovation img{
+    width: clamp(500px, calc(300px + 22.2222vw), 700px);
+    transform: translateX(-180px) rotate(90deg);
+}
+
+.right_content_inovation{
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 800px;
+    text-align: right;
+    color: var.$text-color;
+}
+
+.right_content_inovation p{
+    font-size: clamp(1rem, 0.8977rem + 0.4545vw, 1.25rem);
+    max-width: 480px;
+    font-weight: 500;
 }
 
 // MEDIA SCREENS
 @media (max-width: 900px){
+    // Sessão 1
     .header_index{
+        margin-top: 80px;
         flex-wrap: wrap;
         justify-content: center;
         align-content: flex-start;
@@ -67,11 +139,57 @@
     
     .right_content_header_index{
         padding-top: 24px;
+        padding-left: 0;
     }
 
     .left_content_header_index{
         padding-top: 48px;
         justify-content: center;
         flex-grow: initial;
+    }
+    .left_content_header_index h1{
+        text-align: center;
+    }
+
+    .section_title, p{
+        text-align: center;
+    }
+
+    .flutter_img{
+        display: none;
+    }
+    
+    // Sessão 2
+
+
+    // Sessão 3
+    .inovation{
+        margin-top: 54px;
+        flex-wrap: wrap-reverse;
+    }
+
+    .inovation::after{
+        display: none;
+    }
+
+    .container_img_inovation{
+        justify-content: center;
+    }
+
+    .container_img_inovation img{
+        transform: translateX(0px) rotate(0deg);
+        margin-top: 24px;
+    }
+
+    .container_img_inovation img{
+        width:  clamp(300px, calc(166.6667px + 37.037vw), 500px);
+    }
+    
+    .right_content_inovation{
+        align-items: center;
+    }
+
+    .section_title, p{        
+        text-align: center;
     }
 }
