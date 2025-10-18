@@ -7,7 +7,7 @@ body {
   padding-top: 12px;
   margin: 0;
   max-width: 100%;
-  background-color: #F8F8F8;
+  background-color: #fff;
 }
 
 @font-face {
@@ -198,19 +198,75 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 96px;
-  background-color: #fca211;
+  background-image: linear-gradient(#fca211, #f39a0c);
+  padding-left: clamp(24px, 6.2466px + 4.9315vw, 96px);
+  padding-right: clamp(24px, 6.2466px + 4.9315vw, 96px);
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .agriculture h1 {
   color: #fff;
+  margin: 0;
 }
 
-.content_agriculture {
+.part1 p {
+  flex-grow: 1;
+  color: #fff;
+  font-weight: 500;
+  justify-content: center;
+  font-size: clamp(1rem, 0.8977rem + 0.4545vw, 1.25rem);
+}
+
+.part2 {
+  flex-grow: 1;
   display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  padding-left: 96px;
+  padding-right: 96px;
 }
 
-.part3 img {
-  width: clamp(18.75rem, 6.25rem + 22.2222vw, 31.25rem);
+.part2 div {
+  height: 300px;
+  flex-grow: 3;
+  border-radius: 32px;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  transform: skewX(30deg);
+}
+
+.part2 div:hover {
+  flex-grow: 4;
+}
+
+.part2 div::before {
+  content: "";
+  transition: all 0.5s ease-in-out;
+  height: 300px;
+  background-size: auto 300px;
+  display: block;
+  background-position: center center;
+}
+
+.part2 div:hover::before {
+  transform: scale(1.03);
+}
+
+.part2 div:nth-child(1)::before {
+  background-image: url("/imgs/img1.png");
+}
+
+.part2 div:nth-child(2)::before {
+  background-image: url("/imgs/img2.png");
+}
+
+.part2 div:nth-child(3)::before {
+  background-image: url("/imgs/img3.png");
+}
+
+.part2 div:nth-child(4)::before {
+  background-image: url("/imgs/img4.png");
 }
 
 .inovation {
