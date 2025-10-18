@@ -244,6 +244,7 @@ body {
   content: "";
   transition: all 0.5s ease-in-out;
   height: 300px;
+  width: 100%;
   background-size: auto 300px;
   display: block;
   background-position: center center;
