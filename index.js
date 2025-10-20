@@ -42,3 +42,7 @@ app.get("/", function (_req, res) {
 });
 
 // Importando os Controllers
+import HomeController from './controllers/HomeController.js'
+
+// Definindo o uso das rotas dos Controllers
+app.use('/', HomeController)

@@ -1,8 +1,17 @@
 @use '../abstracts/variables' as var;
 
 // Presets
-.section_title{
-    font-size:  clamp(2rem, calc(1.625rem + 1.6667vw), 3.5rem);
+.section-title{
+    font-size: 	clamp(2rem, calc(1.625rem + 1.6667vw), 3.5rem);
+    color: var.$main-color;
+    margin: 0;
+}
+
+.section-subtitle{
+    color: var.$text-color;
+    font-size: clamp(1.6667rem, calc(0.5333rem + 2.0148vw), 2.8rem);
+    margin-top: 8px;
+    margin-bottom: 16px;
 }
 
 .emphasis{
@@ -10,20 +19,20 @@
     font-weight: 700;
 }
 
-.text_underline{
+.text-underline{
     display: inline;
     text-decoration-line: underline;
     text-decoration-color: var.$main-color;
 }
 
 // SECTION 01
-.header_index{
+.header-index{
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
 }
 
-.left_content_header_index{
+.left-content-header-index{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -31,7 +40,7 @@
     height: fit-content;
 }
 
-.left_content_header_index h1{
+.left-content-header-index h1{
     font-size: clamp(2rem, calc(0.7727rem + 5.4545vw), 6rem);
     font-weight: bolder;
     color: var.$text-color;
@@ -41,14 +50,14 @@
     max-width: 470px;
 }
 
-.left_content_header_index p{
+.left-content-header-index p{
     font-size: var.$p_index_font_size;
     color: var.$text-color;
     max-width: 450px;
     font-weight: 500;
 }
 
-.right_content_header_index{
+.right-content-header-index{
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -56,8 +65,8 @@
     padding-left: 24px;
 }
 
-.right_content_header_index img{
-    width:  clamp(300px, calc(276.1644px + 23.2877vw), 700px);
+.right-content-header-index img{
+    width: 	clamp(300px, calc(276.1644px + 23.2877vw), 700px);
     height: fit-content;
 }
 
@@ -66,60 +75,63 @@
     display: flex;
     flex-direction: column;
     margin-top: 96px;
-    background-image: linear-gradient(#fca211, #f39a0c) ;
     padding-left: clamp(24px, calc(6.2466px + 4.9315vw), 96px);
     padding-right: clamp(24px, calc(6.2466px + 4.9315vw), 96px);
     padding-top: 96px;
     padding-bottom: 96px;
 }
 
-.agriculture h1{
-    color: #fff;
-    margin: 0;
-}
-
 .part1 p{
     flex-grow: 1;
-    color: #fff;
+    color: var.$text-color;
     font-weight: 500;
     justify-content: center;
     font-size: var.$p_index_font_size;
+    margin-bottom: 72px;
 }
 
 .part2 {
     flex-grow: 1;
     display: flex;
-    gap: 32px;
-    margin-top: 24px;
+    gap: clamp(12px, calc(-40px + 5.7778vw), 64px);
     padding-left: 96px;
-    padding-right: 96px;
+    padding-right: clamp(60px, calc(-174px + 26vw), 294px);
+    justify-content: center;
 }
 
 .part2 div{
-    height: 300px;
+    height: 350px;
     flex-grow: 3;
     border-radius: 32px;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
     transform: skewX(30deg);
+    position: relative;
+;
 }
 
 .part2 div:hover{
     flex-grow: 4;
+    border-spacing: 8px;
+    outline: 3px solid var.$main-color;
+    outline-offset: 5px;
 }
 
 .part2 div::before{ 
     content: "";
+    position: absolute;
+    left: -150px;
+    transform: skewX(-30deg);
     transition: all 0.5s ease-in-out;
-    height: 300px;
-    width: 100%;
-    background-size: auto 300px;
+    height: 100%;
+    width: 850px;
+    background-size: cover;
     display: block;
     background-position: center center;
 }
 
 .part2 div:hover::before{
-    transform: scale(1.03);
+    transform: skewX(-30deg) scale(1.03);
 }
 
 .part2 div:nth-child(1)::before{
@@ -138,12 +150,49 @@
     background-image: url('/imgs/img4.png');
 }
 
+.part2 div::after{
+    position: absolute;
+    width: 850px;
+    bottom: 0;
+    padding: 16px 24px 16px 0;
+    display: block;
+    background-color: var.$text-color10;
+    right: -5px;
+    color: #fff;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 500;
+    transform: skewX(-30deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.part2 div:hover::after{
+    background-color: var.$main-color;
+}
+
+.part2 div:nth-child(1)::after{
+    content: "Loren Ipsun";
+}
+
+.part2 div:nth-child(2)::after{
+    content: "Loren Ipsun";
+}
+
+.part2 div:nth-child(3)::after{
+    content: "Loren Ipsun";
+}
+
+.part2 div:nth-child(4)::after{
+    content: "Loren Ipsun";
+}
+
 // SECTION 03
 .inovation{
     display: flex;
     align-items: center;
     position: relative;
     margin-top: 96px;
+    margin-bottom: 96px;
 }
 
 .inovation::after{
@@ -159,17 +208,17 @@
     border-bottom-left-radius: 16px;
 }
 
-.container_img_inovation{
+.container-img-inovation{
     display: flex;
     flex-grow: 1;
 }
 
-.container_img_inovation img{
+.container-img-inovation img{
     width: clamp(500px, calc(300px + 22.2222vw), 700px);
     transform: translateX(-180px) rotate(90deg);
 }
 
-.right_content_inovation{
+.right-content-inovation{
     display: flex;
     align-items: end;
     flex-direction: column;
@@ -179,7 +228,7 @@
     color: var.$text-color;
 }
 
-.right_content_inovation p{
+.right-content-inovation p{
     font-size: clamp(1rem, 0.8977rem + 0.4545vw, 1.25rem);
     max-width: 480px;
     font-weight: 500;
@@ -187,39 +236,80 @@
 
 // MEDIA SCREENS
 @media (max-width: 900px){
+    .section-title{
+        text-align: center;
+    }
+
+    .section-subtitle{
+        text-align: center;
+    }
+
     // Sessão 1
-    .header_index{
+    .header-index{
         margin-top: 80px;
         flex-wrap: wrap;
         justify-content: center;
         align-content: flex-start;
     }
     
-    .right_content_header_index{
+    .right-content-header-index{
         padding-top: 24px;
         padding-left: 0;
     }
 
-    .left_content_header_index{
+    .left-content-header-index{
         padding-top: 48px;
         justify-content: center;
         flex-grow: initial;
     }
-    .left_content_header_index h1{
+    .left-content-header-index h1{
         text-align: center;
     }
 
-    .section_title, p{
+    .section-title, p{
         text-align: center;
     }
 
-    .flutter_img{
+    .flutter-img{
         display: none;
     }
     
     // Sessão 2
+    .part2 {
+        padding-left: 0;
+        padding-right: 0;
+        gap: 0;
+        max-width: 100%;
+        flex-direction: column;
 
+    }
 
+    .part2 div{
+        width: 100%;
+        height: 300px;
+        border-radius: 0;
+    }
+
+    // Reset dos efeitos dos quadros
+    .part2 div::before{
+        left: 0;
+    }
+
+    .part2 div::after{
+        text-align: left;
+        width: 100%;
+        padding-left: 24px;
+        right: inherit;
+    }
+
+    .part2 div, .part2 div::before, .part2 div::after{
+        transform: skewX(0deg);
+    }
+
+    .part2 div:hover, .part2 div:hover::before, .part2 div:hover::after{
+        transform: none;
+        outline: none;
+    }
     // Sessão 3
     .inovation{
         margin-top: 54px;
@@ -230,24 +320,24 @@
         display: none;
     }
 
-    .container_img_inovation{
+    .container-img-inovation{
         justify-content: center;
     }
 
-    .container_img_inovation img{
+    .container-img-inovation img{
         transform: translateX(0px) rotate(0deg);
         margin-top: 24px;
     }
 
-    .container_img_inovation img{
-        width:  clamp(300px, calc(166.6667px + 37.037vw), 500px);
+    .container-img-inovation img{
+        width: 	clamp(300px, calc(166.6667px + 37.037vw), 500px);
     }
     
-    .right_content_inovation{
+    .right-content-inovation{
         align-items: center;
     }
 
-    .section_title, p{        
+    .section-title, p{ 	 	
         text-align: center;
     }
 }

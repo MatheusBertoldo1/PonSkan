@@ -1,10 +1,15 @@
 :root{
     --text-color: #394552;
+    --text-color10: #3945527a;
     --main-color: #fca211;
     --main-color50: #fca21181;
+    --main-color10: #fca2112f;
 }
 
-$main-color: #fca211;
+$main-color: var(--main-color);
+$main-color50: var(--main-color50);
+$main-color10: var(--main-color50);
 
-$text-color: #394552;
-$p_index_font_size : clamp(1rem, 0.8977rem + 0.4545vw, 1.25rem);
+$text-color: var(--text-color);
+$text-color10: var(--text-color10);
+$p-index-font-size : clamp(1rem, 0.8977rem + 0.4545vw, 1.25rem);
