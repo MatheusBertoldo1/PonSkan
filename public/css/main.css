@@ -4,7 +4,6 @@ html, body {
 }
 
 body {
-  padding-top: 12px;
   margin: 0;
   max-width: 100%;
   background-color: #fff;
@@ -33,10 +32,13 @@ body {
 
 :root {
   --text-color: #394552;
+  --text-color50: #394552c4;
   --text-color10: #3945527a;
+  --text-color1: #39455210;
   --main-color: #fca211;
   --main-color50: #fca21181;
   --main-color10: #fca2112f;
+  --main-color1: #fc211111;
 }
 
 .navbar-landingpage {
@@ -410,7 +412,7 @@ body {
   .left-content-header-index h1 {
     text-align: center;
   }
-  .section-title, p {
+  .section-title p {
     text-align: center;
   }
   .flutter-img {
@@ -464,9 +466,246 @@ body {
   .right-content-inovation {
     align-items: center;
   }
-  .section-title, p {
-    text-align: center;
-  }
+}
+.nav-link-selected {
+  background-color: rgba(0, 0, 0, 0.062745098);
+}
+
+.dashboard-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.dashboard-nav {
+  display: flex;
+  height: 100vh;
+  max-width: 240px;
+  padding: 32px 12px 12px 12px;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.navbar-logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  padding: 8px;
+}
+
+.navbar-logo img {
+  width: 150px;
+  height: auto;
+}
+
+.nav-links {
+  margin-top: 32px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-links li {
+  display: block;
+  width: 100%;
+  height: fit-content;
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: 0.2s;
+}
+
+.nav-links li:hover {
+  background-color: var(--text-color1);
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-color50);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.container-button-exit {
+  margin-top: auto;
+}
+
+#exit-account {
+  border: 0;
+  background-color: #fff;
+  color: red;
+  font-weight: 700;
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#exit-account:hover {
+  background-color: #fdeaea;
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #f0f3f7;
+  flex-direction: column;
+  padding: 0 24px 32px 24px;
+}
+
+.welcome-back {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-back p {
+  margin-bottom: 4px;
+  color: var(--text-color);
+}
+
+.welcome-back h1 {
+  margin-top: 0;
+  color: var(--text-color);
+}
+
+.info-banner {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  border-radius: 16px;
+  background-color: var(--main-color);
+  margin-bottom: 64px;
+}
+
+.info-banner div {
+  max-width: 700px;
+  flex-grow: 2;
+  padding: 32px;
+  color: #fff;
+}
+
+.info-banner h1 {
+  margin-top: 0;
+}
+
+.info-banner p {
+  margin-top: 24px;
+  line-height: 24px;
+}
+
+.img-info-banner {
+  display: flex;
+  justify-content: right;
+  flex-grow: 1;
+}
+
+.img-info-banner img {
+  width: 250px;
+  height: 250px;
+}
+
+.info-banner-button {
+  width: 200px;
+  height: 48px;
+  background-color: #fff;
+  border-radius: 8px;
+  color: var(--main-color);
+  border: none;
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.0823529412);
+  transition: 0.3s;
+}
+
+.info-banner-button:hover {
+  background-color: #fffaf3;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3882352941);
+}
+
+.preview-metrics {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-metrics h1 {
+  color: var(--text-color);
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 24px 0;
+}
+
+.wrapper-card-results {
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.card-results {
+  padding: 24px;
+  background-color: #fff;
+  min-width: 200px;
+  display: flex;
+  height: fit-content;
+  border-radius: 16px;
+  gap: 16px;
+  align-items: center;
+}
+
+.svg {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+}
+
+.card-results:nth-child(1) .svg {
+  background-color: var(--main-color10);
+}
+
+.card-results:nth-child(2) .svg {
+  background-color: #e1ffd8;
+}
+
+.card-results:nth-child(3) .svg {
+  background-color: #ffd2d2;
+}
+
+.card-results:nth-child(4) .svg {
+  background-color: #c8f2ff;
+}
+
+.svg img {
+  width: 40px;
+  height: 40px;
+}
+
+.results h2 {
+  font-size: 28px;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.results p {
+  margin: 12px 0 0 0;
+  color: var(--text-color50);
+}
+
+.see-all-reports {
+  color: var(--main-color);
+  align-self: center;
+  text-decoration-color: var(--main-color);
 }
 
 /*# sourceMappingURL=main.css.map */

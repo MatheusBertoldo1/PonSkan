@@ -2,12 +2,97 @@
 
 <div class="dashboard-wrapper">
     <nav class="dashboard-nav">
-    
+        <div class="navbar-logo">
+            <img src="/imgs/logotipo.png" alt="">
+        </div>
+
+        <ul class="nav-links">
+            <li class="nav-link-selected"><a href="">Home</a></li>
+            <li><a href="">Fazer análise</a></li>
+            <li><a href="">Seus relatórios</a></li>
+            <li><a href="">Configurações da conta</a></li>
+            <li><a href="">Ajuda</a></li>
+        </ul>
+
+        <div class="container-button-exit">
+            <a href="/"><button id="exit-account">Sair da conta</button></a>
+        </div>
     </nav>
     
     <main class="dashboard-content">
-    
+        <!-- WELCOME -->
+        <div class="welcome-back">
+            <p>Bem vindo de volta</p>
+            <h1>User name</h1>
+        </div>
         
+        <!-- INFO-BANNER -->
+        <div class="info-banner">
+            <div>
+                <h1>Descubra todos os detalhes da sua plantação</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nam dolorum quam beatae, alias voluptate, consequuntur sit, quidem autem quisquam vel nesciunt amet culpa soluta.</p>
+                <a href="/upload"><button class="info-banner-button">Fazer upload de imagem</button></a>
+            </div>
+
+            <div class="img-info-banner">
+                <img src="/imgs/tree.png" alt="">
+            </div>
+        </div>
+
+        <!-- PREVIEW - METRICS -->
+        <div class="preview-metrics">
+            <h1>Resultados das suas análises</h1>
+
+            <div class="wrapper-card-results">
+                <div class="card-results">
+                    <div class="svg">
+                        <img src="/imgs/icon-upload-img.png" alt="">
+                    </div>
+
+                    <div class="results">
+                        <h2>33</h2>
+                        <p>Fotos enviadas</p>
+                    </div>
+                </div>
+
+                <div class="card-results">
+                    <div class="svg">
+                        <img src="/imgs/icon-upload-img.png" alt="">
+                    </div>
+
+                    <div class="results">
+                        <h2>10</h2>
+                        <p>Pré-diagnósticos positivos</p>
+                    </div>
+                </div>
+
+                <div class="card-results">
+                    <div class="svg">
+                        <img src="/imgs/icon-upload-img.png" alt="">
+                    </div>
+
+                    <div class="results">
+                        <h2>23</h2>
+                        <p>Pré-diagnósticos negativos</p>
+                    </div>
+                </div>
+
+                <div class="card-results">
+                    <div class="svg">
+                        <img src="/imgs/icon-upload-img.png" alt="">
+                    </div>
+
+                    <div class="results">
+                        <h2>23</h2>
+                        <p>Planos de ações feitos</p>
+                    </div>
+                </div>
+                
+                <a class="see-all-reports" href="/relatorios">Ver todos os relatórios</a>
+            </div>
+
+        </div>
+
     </main>
 </div>
 
