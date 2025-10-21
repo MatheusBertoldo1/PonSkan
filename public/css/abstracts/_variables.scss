@@ -8,7 +8,13 @@
     --main-color50: #fca21181;
     --main-color10: #fca2112f;
     --main-color1: #fc211111;
+
+    --gray-background-color: #00000010;
+
+    --box-shadow: #00000010;
 }
+
+$gray-background-color: var(--gray-background-color);
 
 $main-color: var(--main-color);
 $main-color50: var(--main-color50);
@@ -19,5 +25,6 @@ $text-color: var(--text-color);
 $text-color50: var(--text-color50);
 $text-color10: var(--text-color10);
 $text-color1: var(--text-color1);
+$box-shadow: var(--box-shadow);
 
 $p-index-font-size : clamp(1rem, 0.8977rem + 0.4545vw, 1.25rem);

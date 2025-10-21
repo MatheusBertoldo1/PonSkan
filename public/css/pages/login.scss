@@ -1,0 +1,78 @@
+@use '../abstracts/variables' as var;
+
+.container-form-login{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var.$gray-background-color;
+}
+
+.form{
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 3px 0 var.$box-shadow;
+    padding: 64px;
+}
+
+.form h1{
+    text-align: center;
+    color: var.$text-color;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form form label{
+    color: var.$text-color;
+}
+
+.form form input{
+    padding-left: 16px;
+    height: 40px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    border: none;
+    background-color: var.$gray-background-color;
+}
+
+.form form input:focus{
+    outline-color: var.$main-color;
+
+}
+
+#submit-login {
+    background-color: var.$main-color;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+// classe temporária
+.temporario-submit-login{
+    background-color: var.$main-color;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+.form p{
+    color: var.$text-color;
+}

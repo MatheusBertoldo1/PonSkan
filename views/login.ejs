@@ -1,5 +1,22 @@
 <%- include('partials/header.ejs') %>
-    <main class="container-login">
-        
+
+    <main class="container-form-login">
+        <div class="form">
+            <h1>Bem vindo</h1>
+
+            <form action="POST">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email-login" placeholder="email@email.com">
+
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha-login" placeholder="******">
+
+                <!-- <input type="submit" value="Entrar" id="submit-login"> -->
+                <a href="/home" class="temporario-submit-login">Fazer login</a>
+            </form>
+
+            <p>Já possuo uma conta! <a href="/make-account">Entrar</a></p>
+        </div>
     </main>
+
 <%- include('partials/footer.ejs') %>
