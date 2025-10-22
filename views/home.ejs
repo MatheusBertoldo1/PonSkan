@@ -1,23 +1,7 @@
 <%- include('partials/header.ejs')  %>
 
 <div class="dashboard-wrapper">
-    <nav class="dashboard-nav">
-        <div class="navbar-logo">
-            <img src="/imgs/logotipo.png" alt="">
-        </div>
-
-        <ul class="nav-links">
-            <li class="nav-link-selected"><a href="">Home</a></li>
-            <li><a href="">Fazer análise</a></li>
-            <li><a href="">Seus relatórios</a></li>
-            <li><a href="">Configurações da conta</a></li>
-            <li><a href="">Ajuda</a></li>
-        </ul>
-
-        <div class="container-button-exit">
-            <a href="/"><button id="exit-account">Sair da conta</button></a>
-        </div>
-    </nav>
+    <%- include('partials/navbar-side.ejs') %>
     
     <main class="dashboard-content">
         <!-- WELCOME -->
@@ -44,7 +28,7 @@
             <h1>Resultados das suas análises</h1>
 
             <div class="wrapper-card-results">
-                <div class="card-results">
+                <div class="card-results _box-shadow-1">
                     <div class="svg">
                         <img src="/imgs/icon-upload-img.png" alt="">
                     </div>

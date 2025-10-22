@@ -1,10 +1,13 @@
 @use 'abstracts/config';
-@use 'abstracts/patterns';
+@use 'abstracts/utilities';
+@use 'abstracts/layout-app';
 
 @use 'partials/_navbar-landingpage';
+@use 'partials/_navbar-side';
 @use 'partials/_footer-landingpage';
 
 @use 'pages/index';
 @use 'pages/home';
 @use 'pages/login';
+@use 'pages/make-account.scss';
 

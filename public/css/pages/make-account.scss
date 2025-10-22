@@ -1,6 +1,6 @@
 @use '../abstracts/variables' as var;
 
-.container-form-login{
+.container-form-make-account{
     height: 100vh;
     width: 100vw;
     padding: 24px;
@@ -24,7 +24,7 @@
     padding: 148px 64px 64px 64px;
 }
 
-.login-logo{
+.make-account-logo{
     width: 100%;
     height: 148px;
     position: absolute;
@@ -36,12 +36,12 @@
     background-color: var.$main-color;
 }
 
-.login-logo svg{
+.make-account-logo svg{
     height: 96px;
     width: auto;
 }
 
-.login-logo svg path{
+.make-account-logo svg path{
     fill: #fff;
     stroke: none;
 }
@@ -70,11 +70,11 @@
     background-color: transparent;
 }
 
-.form form input:focus{
+.form form input:focus {
     outline-color: var.$main-color;
 }
 
-#submit-login {
+#submit-make-account {
     background-color: var.$main-color;
     color: #fff;
     font-size: 16px;
@@ -84,7 +84,7 @@
 }
 
 // classe temporária
-.temporario-submit-login{
+.temporario-submit-make-account {
     background-color: var.$main-color;
     color: #fff;
     font-size: 16px;
@@ -100,7 +100,7 @@
     transition: .2s;
 }
 
-.temporario-submit-login:hover{
+.temporario-submit-make-account:hover{
     box-shadow: 0 0 3px 0 #b1b1b1;
 }
 .form p{

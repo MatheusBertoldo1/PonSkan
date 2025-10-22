@@ -1,0 +1,142 @@
+@use '../abstracts/variables' as var;
+
+$spacers:(
+    4: 4px,
+    8: 8px,
+    12: 12px,
+    16: 16px,
+    20: 20px,
+    24: 24px,
+    28: 28px,
+    32: 32px,
+    40: 40px,
+    48: 48px,
+    56: 56px,
+    64: 64px,
+    96: 96px
+);
+
+// TAMANHOS DIVERSOS (PX)
+@each $key, $value in $spacers{
+    // font-size
+    ._font-size-#{$key}{
+        font-size: #{$value};
+    } 
+
+    // border-radius
+    ._border-radius-#{$key}{
+        border-radius: #{$value};
+    }
+
+    // padding
+    ._padding-top-#{$key}{
+        padding-top: #{$value};
+    }
+
+    ._padding-right-#{$key}{
+        padding-right: #{$value};
+    }
+
+    ._padding-bottom-#{$key}{
+        padding-bottom: #{$value};
+    }
+
+    ._padding-left-#{$key}{
+        padding-left: #{$value};
+    }
+
+    ._padding-all-#{$key}{
+        padding: #{$value};
+    }
+
+    // margin
+    ._margin-top-#{$key}{
+        margin-top: #{$value};
+    }
+
+    ._margin-right-#{$key}{
+        margin-right: #{$value};
+    }
+
+    ._margin-bottom-#{$key}{
+        margin-bottom: #{$value};
+    }
+
+    ._margin-left-#{$key}{
+        margin-left: #{$value};
+    }
+
+    ._margin-all-#{$key}{
+        margin: #{$value};
+    }
+}
+
+// RESPONSIVO
+.pattern-padding{
+    padding-left: clamp(24px, calc(6.2466px + 4.9315vw), 96px);
+    padding-right: clamp(24px, calc(6.2466px + 4.9315vw), 96px);
+}
+
+// DISPLAY FLEX
+._flex{
+    display: flex;
+}
+
+// direção flex
+._flex-column{
+    flex-direction: column;
+}
+._flex-row{
+    flex-direction: row;
+}
+
+// flex wrap
+._flex-wrap-wrap{
+    flex-wrap: wrap;
+}
+._flex-wrap-nowrap{
+    flex-wrap: nowrap;
+}
+
+// alinhamento flex
+._justify-left{
+    justify-content: left;
+}
+._justify-center{
+    justify-content: center;
+}
+._justify-right{
+    justify-content: right;
+}
+._align-center{
+    align-items: center;
+}
+
+// TEXTOS
+._txt-gray{
+    color: var.$text-color;
+}
+._txt-main-color{
+    color: var.$main-color;
+}
+
+// BACKGROUND
+._background-white{
+    background-color: #fff;
+}
+._background-gray{
+    background-color: var.$gray-background-color;
+}
+._background-main-color{
+    background-color: var.$main-color;
+}
+
+// BOX-SHADOW
+._box-shadow-1{
+    box-shadow: 0 0 3px 0 #00000010;
+}
+
+// BORDER-RADIUS 100%
+._circle{
+    border-radius: 100%;
+}

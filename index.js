@@ -44,7 +44,11 @@ app.get("/", function (_req, res) {
 // Importando os Controllers
 import HomeController from './controllers/HomeController.js'
 import LoginController from './controllers/LoginController.js'
+import MakeAccountController from './controllers/MakeAccountController.js'
+import ConfigAccount from './controllers/ConfigAccount.js'
 
 // Definindo o uso das rotas dos Controllers
 app.use('/', HomeController)
 app.use('/', LoginController)
+app.use('/', MakeAccountController)
+app.use('/', ConfigAccount)
