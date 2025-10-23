@@ -4,12 +4,96 @@
     <%- include('partials/navbar-side.ejs') %>
     
     <main class="dashboard-content">
-        <h1 class="_txt-gray _font-size-40">Configurações de conta</h1>
+        <h1 class="_color-gray _font-size-40">Configurações de conta</h1>
 
-        <div class=" _background-white _border-radius-16 _padding-all-16 _flex _flex-row _box-shadow-1">
-            <div class="_circle">
-
+        <div class="data-user-wrapper">
+            <div class="header-data-user">
+                 <h1 class="_font-size-20 _color-gray">Minhas informações</h1>
+    
+                <div class="btn-edit-wrapper">
+                    <button>Editar informações</button>
+                </div>
             </div>
+
+            <hr>
+
+            <fieldset class="information-wrapper">
+                <legend>informações pessoais</legend>
+
+                <div class="input-data-container">
+                    <label for="name">Primeiro nome</label>
+                    <input type="text" value="Lorem">
+                </div>
+
+                <div class="input-data-container">
+                    <label for="name">Último nome</label>
+                    <input type="text" value="Ipsun">
+                </div>
+            </fieldset>
+
+            <fieldset class="information-wrapper">
+                <legend>Endereço</legend>
+
+                <div class="input-data-container">
+                    <label for="name">Bairro</label>
+                    <input type="text" value="Parafuso">
+                </div>
+
+                <div class="input-data-container">
+                    <label for="name">Cidade</label>
+                    <input type="text" value="Cajati">
+                </div>
+
+                <div class="input-data-container">
+                    <label for="name">UF</label>
+                    <input type="text" value="SP">
+                </div>
+            </fieldset>
+
+            <fieldset class="information-wrapper">
+                <legend>Contato</legend>
+
+                <div class="input-data-container">
+                    <label for="name">Email</label>
+                    <input type="text" value="loremipsun@email.com">
+                </div>
+
+                <div class="input-data-container">
+                    <label for="name">Telefone</label>
+                    <input type="text" value="13-123456789">
+                </div>
+            </fieldset>
+
+
+            
+        </div>
+
+        <div class="data-user-wrapper">
+            <div class="header-data-user">
+                 <h1 class="_font-size-20 _color-gray">Informações da conta</h1>
+    
+                <div class="btn-edit-wrapper">
+                    <button>Editar informações</button>
+                </div>
+            </div>
+
+            <fieldset class="information-wrapper">
+                <legend>Resumo das análises</legend>
+
+                <div class="input-data-container">
+                    <label for="name">Total de análises concluídas</label>
+                    <input type="text" value="12">
+                </div>
+
+                <div class="input-data-container">
+                    <label for="name">Relatórios gerados</label>
+                    <input type="text" value="2">
+                </div>
+            </fieldset>
+
+            <hr>
+
+            <button id="delete-account">Excluir conta</button>
         </div>
     </main>
 </div>

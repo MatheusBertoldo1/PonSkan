@@ -9,11 +9,12 @@ $spacers:(
     24: 24px,
     28: 28px,
     32: 32px,
+    36: 36px,
     40: 40px,
     48: 48px,
     56: 56px,
     64: 64px,
-    96: 96px
+    96: 96px,
 );
 
 // TAMANHOS DIVERSOS (PX)
@@ -77,27 +78,6 @@ $spacers:(
     padding-right: clamp(24px, calc(6.2466px + 4.9315vw), 96px);
 }
 
-// DISPLAY FLEX
-._flex{
-    display: flex;
-}
-
-// direção flex
-._flex-column{
-    flex-direction: column;
-}
-._flex-row{
-    flex-direction: row;
-}
-
-// flex wrap
-._flex-wrap-wrap{
-    flex-wrap: wrap;
-}
-._flex-wrap-nowrap{
-    flex-wrap: nowrap;
-}
-
 // alinhamento flex
 ._justify-left{
     justify-content: left;
@@ -113,30 +93,20 @@ $spacers:(
 }
 
 // TEXTOS
-._txt-gray{
+._color-gray{
     color: var.$text-color;
 }
-._txt-main-color{
+._color-main{
     color: var.$main-color;
 }
 
-// BACKGROUND
-._background-white{
-    background-color: #fff;
-}
-._background-gray{
-    background-color: var.$gray-background-color;
-}
-._background-main-color{
-    background-color: var.$main-color;
+// ALINHAMENTO FLEX
+_flex-row{
+    display: flex;
+    flex-direction: row;
 }
 
-// BOX-SHADOW
-._box-shadow-1{
-    box-shadow: 0 0 3px 0 #00000010;
-}
-
-// BORDER-RADIUS 100%
-._circle{
-    border-radius: 100%;
+_flex-column{
+    display: flex;
+    flex-direction: column;
 }
