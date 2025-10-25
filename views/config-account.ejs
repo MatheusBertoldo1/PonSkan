@@ -11,7 +11,7 @@
                  <h1 class="_font-size-20 _color-gray">Minhas informações</h1>
     
                 <div class="btn-edit-wrapper">
-                    <button>Editar informações</button>
+                    <button onclick="editData()">Editar informações</button>
                 </div>
             </div>
 
@@ -21,13 +21,13 @@
                 <legend>informações pessoais</legend>
 
                 <div class="input-data-container">
-                    <label for="name">Primeiro nome</label>
-                    <input type="text" value="Lorem">
+                    <label for="first-name">Primeiro nome</label>
+                    <input id="first-name" type="text" value="<%= user.firstName %>">
                 </div>
 
                 <div class="input-data-container">
-                    <label for="name">Último nome</label>
-                    <input type="text" value="Ipsun">
+                    <label for="last-name">Último nome</label>
+                    <input id="last-name" type="text" value="<%= user.lastName %>">
                 </div>
             </fieldset>
 
@@ -35,18 +35,18 @@
                 <legend>Endereço</legend>
 
                 <div class="input-data-container">
-                    <label for="name">Bairro</label>
-                    <input type="text" value="Parafuso">
+                    <label for="district">Bairro</label>
+                    <input id="district" type="text" value="<%= user.zone %>">
                 </div>
 
                 <div class="input-data-container">
-                    <label for="name">Cidade</label>
-                    <input type="text" value="Cajati">
+                    <label for="city">Cidade</label>
+                    <input id="city" type="text" value="<%= user.city %>">
                 </div>
 
                 <div class="input-data-container">
-                    <label for="name">UF</label>
-                    <input type="text" value="SP">
+                    <label for="uf">UF</label>
+                    <input id="uf" type="text" value="<%= user.uf %>">
                 </div>
             </fieldset>
 
@@ -54,13 +54,13 @@
                 <legend>Contato</legend>
 
                 <div class="input-data-container">
-                    <label for="name">Email</label>
-                    <input type="text" value="loremipsun@email.com">
+                    <label for="mail">Email</label>
+                    <input id="mail" type="text" value="<%= user.mail %>">
                 </div>
 
                 <div class="input-data-container">
-                    <label for="name">Telefone</label>
-                    <input type="text" value="13-123456789">
+                    <label for="phone">Telefone</label>
+                    <input id="phone" type="text" value="<%= user.phone %>">
                 </div>
             </fieldset>
 
@@ -81,13 +81,13 @@
                 <legend>Resumo das análises</legend>
 
                 <div class="input-data-container">
-                    <label for="name">Total de análises concluídas</label>
-                    <input type="text" value="12">
+                    <label for="analysis">Total de análises concluídas</label>
+                    <input id="analysis" type="text" value="0">
                 </div>
 
                 <div class="input-data-container">
-                    <label for="name">Relatórios gerados</label>
-                    <input type="text" value="2">
+                    <label for="reports">Relatórios gerados</label>
+                    <input id="reports" type="text" value="0">
                 </div>
             </fieldset>
 

@@ -36,6 +36,9 @@ connection.authenticate().then(() => {
 // Criando o banco de dados (se ele ainda não existir)
 connection.query(`create database if not exists ponskan`).then(() => console.log("Banco criado")).catch(error => console.log(error))
 
+// Importando os models
+import {GetUser} from "./models/User.js"
+
 // Definindo a rota principal
 app.get("/", function (_req, res) {
   res.render("index");
@@ -46,9 +49,17 @@ import HomeController from './controllers/HomeController.js'
 import LoginController from './controllers/LoginController.js'
 import MakeAccountController from './controllers/MakeAccountController.js'
 import ConfigAccount from './controllers/ConfigAccount.js'
+import MapController from './controllers/MapController.js'
+import HelpController from './controllers/HelpController.js'
+import AnalysisController from './controllers/AnalysisController.js'
+import Reports from './controllers/ReportsController.js'
 
 // Definindo o uso das rotas dos Controllers
 app.use('/', HomeController)
 app.use('/', LoginController)
 app.use('/', MakeAccountController)
 app.use('/', ConfigAccount)
+app.use('/', MapController)
+app.use('/', HelpController)
+app.use('/', AnalysisController)
+app.use('/', Reports)

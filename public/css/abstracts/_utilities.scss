@@ -80,15 +80,19 @@ $spacers:(
 
 // alinhamento flex
 ._justify-left{
+    display: flex;
     justify-content: left;
 }
 ._justify-center{
+    display: flex;
     justify-content: center;
 }
 ._justify-right{
+    display: flex;
     justify-content: right;
 }
 ._align-center{
+    display: flex;
     align-items: center;
 }
 

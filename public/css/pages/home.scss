@@ -104,6 +104,11 @@
     border-radius: 16px;
     gap: 16px;
     align-items: center;
+    transition: .2s;
+}
+
+.card-results:hover{
+    box-shadow: 0 0 4px 0 #cacaca;
 }
 
 .svg{
