@@ -11,70 +11,83 @@
                  <h1 class="_font-size-20 _color-gray">Minhas informações</h1>
     
                 <div class="btn-edit-wrapper">
-                    <button onclick="editData()">Editar informações</button>
+                    <button onclick="EnableUpdateData('confirm-edit1'); DisableThisElement(this)">Editar informações</button>
                 </div>
             </div>
 
             <hr>
-
-            <fieldset class="information-wrapper">
-                <legend>informações pessoais</legend>
-
-                <div class="input-data-container">
-                    <label for="first-name">Primeiro nome</label>
-                    <input id="first-name" type="text" value="<%= user.firstName %>">
-                </div>
-
-                <div class="input-data-container">
-                    <label for="last-name">Último nome</label>
-                    <input id="last-name" type="text" value="<%= user.lastName %>">
-                </div>
-            </fieldset>
-
-            <fieldset class="information-wrapper">
-                <legend>Endereço</legend>
-
-                <div class="input-data-container">
-                    <label for="district">Bairro</label>
-                    <input id="district" type="text" value="<%= user.zone %>">
-                </div>
-
-                <div class="input-data-container">
-                    <label for="city">Cidade</label>
-                    <input id="city" type="text" value="<%= user.city %>">
-                </div>
-
-                <div class="input-data-container">
-                    <label for="uf">UF</label>
-                    <input id="uf" type="text" value="<%= user.uf %>">
-                </div>
-            </fieldset>
-
-            <fieldset class="information-wrapper">
-                <legend>Contato</legend>
-
-                <div class="input-data-container">
-                    <label for="mail">Email</label>
-                    <input id="mail" type="text" value="<%= user.mail %>">
-                </div>
-
-                <div class="input-data-container">
-                    <label for="phone">Telefone</label>
-                    <input id="phone" type="text" value="<%= user.phone %>">
-                </div>
-            </fieldset>
-
-
             
+            <form action="/config-account/update/" method="post">
+                <fieldset class="information-wrapper">
+                    <legend>informações pessoais</legend>
+
+                    <div class="input-data-container">
+                        <label for="first-name">Primeiro nome</label>
+                        <input class="personal-info" name="firstName" type="text" value="<%= user.firstName %>" required>
+                    </div>
+
+                    <div class="input-data-container">
+                        <label for="last-name">Último nome</label>
+                        <input class="personal-info" name="lastName" type="text" value="<%= user.lastName %>" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="information-wrapper">
+                    <legend>Endereço</legend>
+
+                    <div class="input-data-container">
+                        <label for="district">Bairro</label>
+                        <input class="personal-info" name="district" type="text" value="<%= user.zone %>" required>
+                    </div>
+
+                    <div class="input-data-container">
+                        <label for="city">Cidade</label>
+                        <input class="personal-info" name="city" type="text" value="<%= user.city %>" required>
+                    </div>
+
+                    <div class="input-data-container">
+                        <label for="uf">UF</label>
+                        <input class="personal-info" name="uf" type="text" value="<%= user.uf %>" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="information-wrapper">
+                    <legend>Contato</legend>
+
+                    <div class="input-data-container">
+                        <label for="mail">Email</label>
+                        <input class="personal-info" name="mail" type="text" value="<%= user.mail %>" required>
+                    </div>
+
+                    <div class="input-data-container">
+                        <label for="phone">Telefone</label>
+                        <input class="personal-info" name="phone" type="text" value="<%= user.phone %>" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="information-wrapper">
+                    <legend>Segurança</legend>
+
+                    <div class="input-data-container">
+                        <label for="password">Senha</label>
+                        <input class="personal-info" name="password" type="password" placeholder="*****" required>
+                    </div>
+                </fieldset>
+
+                <button 
+                    type="submit" 
+                    class="confirm-edit" 
+                    id="confirm-edit1"
+                    onclick="return confirm('Confirma as alterações realizadas?')"
+                >
+                    Salvar alterações
+                </button>
+            </form>
         </div>
 
         <div class="data-user-wrapper">
             <div class="header-data-user">
                  <h1 class="_font-size-20 _color-gray">Informações da conta</h1>
-    
-                <div class="btn-edit-wrapper">
-                    <button>Editar informações</button>
-                </div>
             </div>
 
             <fieldset class="information-wrapper">
@@ -82,15 +95,14 @@
 
                 <div class="input-data-container">
                     <label for="analysis">Total de análises concluídas</label>
-                    <input id="analysis" type="text" value="0">
+                    <input class="account-info" name="analysis" type="text" value="0" required>
                 </div>
 
                 <div class="input-data-container">
                     <label for="reports">Relatórios gerados</label>
-                    <input id="reports" type="text" value="0">
+                    <input class="account-info" name="reports" type="text" value="0" required>
                 </div>
             </fieldset>
-
             <hr>
 
             <button id="delete-account">Excluir conta</button>

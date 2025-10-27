@@ -48,7 +48,7 @@ app.get("/", function (_req, res) {
 import HomeController from './controllers/HomeController.js'
 import LoginController from './controllers/LoginController.js'
 import MakeAccountController from './controllers/MakeAccountController.js'
-import ConfigAccount from './controllers/ConfigAccount.js'
+import ConfigAccountController from './controllers/ConfigAccountController.js'
 import MapController from './controllers/MapController.js'
 import HelpController from './controllers/HelpController.js'
 import AnalysisController from './controllers/AnalysisController.js'
@@ -58,7 +58,7 @@ import Reports from './controllers/ReportsController.js'
 app.use('/', HomeController)
 app.use('/', LoginController)
 app.use('/', MakeAccountController)
-app.use('/', ConfigAccount)
+app.use('/', ConfigAccountController)
 app.use('/', MapController)
 app.use('/', HelpController)
 app.use('/', AnalysisController)

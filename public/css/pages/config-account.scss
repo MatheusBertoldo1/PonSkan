@@ -11,6 +11,12 @@
     margin-bottom: 16px;
 }
 
+.data-user-wrapper form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .header-data-user{
     display: flex;
     gap: 16px;
@@ -30,6 +36,7 @@
     color: var.$main-color;
     cursor: pointer;
     font-size: 16px;
+    opacity: 1;
 }
 
 .btn-edit-wrapper button:hover{
@@ -66,12 +73,38 @@
 }
 
 .input-data-container input{
+    width: fit-content;
     border: none;
     font-size: 16px;
-    font-weight: 600;
-    color: var.$text-color50;
+    // font-weight: 600;
+    color: var.$text-color10;
     cursor: default;
     pointer-events: none;
+    padding: 4px 8px;
+    border-radius: 8px;
+    background-color: #dddddd;
+    transition: 0.2s;
+}
+
+.input-data-container input:focus{
+    outline: none;
+    border: 1px solid var.$main-color !important;
+}
+
+.confirm-edit{
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var.$main-color;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
 #delete-account{
