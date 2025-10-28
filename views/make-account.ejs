@@ -12,18 +12,77 @@
 
             <h1>Criar conta</h1>
 
-            <form action="POST">
-                <label for="nome">Nome</label>
-                <input type="text" id="name-make-account" placeholder="Meu Nome">
+            <form action="/make-account/create" method="post">
+                <div>
+                    <label for="firstName">Primeiro nome</label>
+                    <input type="text" name="firstName" placeholder="Meu primeiro nome" required>
+                </div>
 
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email-make-account" placeholder="email@email.com">
+                <div>
+                    <label for="lastName">Último nome</label>
+                    <input type="text" name="lastName" placeholder="Meu ultimo nome" required>
+                </div>
 
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha-make-account" placeholder="******">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="mail" placeholder="email@email.com" required>
+                </div>
 
-                <!-- <input type="submit" value="Entrar" id="submit-make-account"> -->
-                <a href="/home" class="temporario-submit-make-account">Criar conta</a>
+                <div>
+                    <label for="phone">Telefone</label>
+                    <input type="text" name="phone" placeholder="551397625784" required>
+                </div>
+
+                <div>
+                    <label for="password">Senha</label>
+                    <input type="password" name="password"placeholder="******" required>
+                </div>
+
+                <div>
+                    <label for="zone">Bairro</label>
+                    <input type="text" name="zone" placeholder="Meu bairro" required>
+                </div>
+
+                <div>
+                    <label for="city">Cidade</label>
+                    <input type="text" name="city" placeholder="Minha cidade" required>
+                </div>
+
+                <div>
+                    <label for="uf">UF</label>
+                    <select name="uf" required>
+                        <option value="" disabled selected>Selecione o Estado</option>
+                        <option value="ac">AC</option>
+                        <option value="al">AL</option>
+                        <option value="ap">AP</option>
+                        <option value="am">AM</option>
+                        <option value="ba">BA</option>
+                        <option value="ce">CE</option>
+                        <option value="df">DF</option>
+                        <option value="es">ES</option>
+                        <option value="go">GO</option>
+                        <option value="ma">MA</option>
+                        <option value="mt">MT</option>
+                        <option value="ms">MS</option>
+                        <option value="mg">MG</option>
+                        <option value="pa">PA</option>
+                        <option value="pb">PB</option>
+                        <option value="pr">PR</option>
+                        <option value="pe">PE</option>
+                        <option value="pi">PI</option>
+                        <option value="rj">RJ</option>
+                        <option value="rn">RN</option>
+                        <option value="rs">RS</option>
+                        <option value="ro">RO</option>
+                        <option value="rr">RR</option>
+                        <option value="sc">SC</option>
+                        <option value="sp">SP</option>
+                        <option value="se">SE</option>
+                        <option value="to">TO</option>
+                    </select>
+                </div>
+
+                <input type="submit" value="Criar conta" id="submit-make-account">
             </form>
 
             <p>Já possuo uma conta! <a href="/login">Entrar</a></p>

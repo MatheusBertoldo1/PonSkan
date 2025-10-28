@@ -104,8 +104,10 @@
                 </div>
             </fieldset>
             <hr>
-
-            <button id="delete-account">Excluir conta</button>
+            
+            <form action="/config-account/delete" method="post">
+                <button id="delete-account" onclick="()=>{window.alert('Realmente deseja excluir sua conta?')}">Excluir conta</button>
+            </form>
         </div>
     </main>
 </div>

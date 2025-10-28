@@ -1,4 +1,4 @@
-import Sequelize from "sequelize";
+import Sequelize, { where } from "sequelize";
 import connection from "../config/sequelize-config.js";
 
 const User = connection.define('users', {
@@ -49,8 +49,7 @@ const GetUser = async (id)=>{
     }
 }
 
-
-const SetUser = async (id, {firstName, lastName, mail, password, phone, zone, city, uf}) =>{
+const UpdateUser = async (id, {firstName, lastName, mail, password, phone, zone, city, uf}) =>{
     try {
         User.update(
         { 
@@ -71,4 +70,38 @@ const SetUser = async (id, {firstName, lastName, mail, password, phone, zone, ci
     }
 }
 
-export {GetUser, SetUser}
+const DeleteUser = async (id) =>{
+    try {
+        await User.destroy({
+            where: {
+                id
+            }
+        })
+    } 
+    
+    catch (error) {
+        throw new Error('Erro ao deletar usuário')
+    }
+    
+}
+
+const CreateUser = async ({firstName, lastName, mail, password, phone, zone, city, uf}) => {
+    try {
+        await User.create({
+            firstName, 
+            lastName, 
+            mail, 
+            password, 
+            phone, 
+            zone, 
+            city, 
+            uf
+        })    
+    } 
+    catch (error) {
+        console.log(error)
+        throw new Error('Erro ao criar usuário')
+    }
+}
+
+export {GetUser, UpdateUser, DeleteUser, CreateUser}

@@ -10,7 +10,7 @@
     background-color: var.$gray-background-color;
 }
 
-.form{
+.form-login{
     width: 500px;
     height: fit-content;
     overflow: hidden;
@@ -46,22 +46,22 @@
     stroke: none;
 }
 
-.form h1{
+.form-login h1{
     text-align: center;
     color: var.$text-color;
 }
 
-.form form{
+.form-login form{
     display: flex;
     flex-direction: column;
 }
 
-.form form label{
+.form-login form label{
     color: var.$text-color;
     margin-bottom: 4px;
 }
 
-.form form input{
+.form-login form input{
     padding-left: 16px;
     height: 40px;
     border-radius: 8px;
@@ -70,7 +70,7 @@
     background-color: transparent;
 }
 
-.form form input:focus{
+.form-login form input:focus{
     outline-color: var.$main-color;
 }
 
@@ -83,31 +83,11 @@
     border: none;
 }
 
-// classe temporária
-.temporario-submit-login{
-    background-color: var.$main-color;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    height: 40px;
-    border: none;
-    border-radius: 8px;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    line-height: 40px;
-    margin-bottom: 16px;
-    transition: .2s;
-}
-
-.temporario-submit-login:hover{
-    box-shadow: 0 0 3px 0 #b1b1b1;
-}
-.form p{
+.form-login p{
     color: var.$text-color;
 }
 
-.form p a {
+.form-login p a {
     color: var.$main-color;
 
 }

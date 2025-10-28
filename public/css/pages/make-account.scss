@@ -11,7 +11,7 @@
 }
 
 .form{
-    width: 500px;
+    width: 800px;
     height: fit-content;
     overflow: hidden;
     display: flex;
@@ -53,15 +53,25 @@
 
 .form form{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.form form label{
+.form form div{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 50%;
+    min-width: 300px;
+    padding-right: 16px;
+}
+
+.form form div label{
     color: var.$text-color;
     margin-bottom: 4px;
 }
 
-.form form input{
+.form form div input, .form form div select{
     padding-left: 16px;
     height: 40px;
     border-radius: 8px;
@@ -81,28 +91,11 @@
     font-weight: bold;
     cursor: pointer;
     border: none;
-}
-
-// classe temporária
-.temporario-submit-make-account {
-    background-color: var.$main-color;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    height: 40px;
-    border: none;
-    border-radius: 8px;
     width: 100%;
-    text-align: center;
-    text-decoration: none;
-    line-height: 40px;
-    margin-bottom: 16px;
-    transition: .2s;
+    padding: 12px;
+    border-radius: 8px;
 }
 
-.temporario-submit-make-account:hover{
-    box-shadow: 0 0 3px 0 #b1b1b1;
-}
 .form p{
     color: var.$text-color;
 }

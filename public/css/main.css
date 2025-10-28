@@ -1527,7 +1527,7 @@ _flex-column {
   background-color: var(--gray-background-color);
 }
 
-.form {
+.form-login {
   width: 500px;
   height: fit-content;
   overflow: hidden;
@@ -1563,22 +1563,22 @@ _flex-column {
   stroke: none;
 }
 
-.form h1 {
+.form-login h1 {
   text-align: center;
   color: var(--text-color);
 }
 
-.form form {
+.form-login form {
   display: flex;
   flex-direction: column;
 }
 
-.form form label {
+.form-login form label {
   color: var(--text-color);
   margin-bottom: 4px;
 }
 
-.form form input {
+.form-login form input {
   padding-left: 16px;
   height: 40px;
   border-radius: 8px;
@@ -1587,7 +1587,7 @@ _flex-column {
   background-color: transparent;
 }
 
-.form form input:focus {
+.form-login form input:focus {
   outline-color: var(--main-color);
 }
 
@@ -1600,31 +1600,11 @@ _flex-column {
   border: none;
 }
 
-.temporario-submit-login {
-  background-color: var(--main-color);
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  height: 40px;
-  border: none;
-  border-radius: 8px;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-  line-height: 40px;
-  margin-bottom: 16px;
-  transition: 0.2s;
-}
-
-.temporario-submit-login:hover {
-  box-shadow: 0 0 3px 0 #b1b1b1;
-}
-
-.form p {
+.form-login p {
   color: var(--text-color);
 }
 
-.form p a {
+.form-login p a {
   color: var(--main-color);
 }
 
@@ -1639,7 +1619,7 @@ _flex-column {
 }
 
 .form {
-  width: 500px;
+  width: 800px;
   height: fit-content;
   overflow: hidden;
   display: flex;
@@ -1681,15 +1661,25 @@ _flex-column {
 
 .form form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.form form label {
+.form form div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 50%;
+  min-width: 300px;
+  padding-right: 16px;
+}
+
+.form form div label {
   color: var(--text-color);
   margin-bottom: 4px;
 }
 
-.form form input {
+.form form div input, .form form div select {
   padding-left: 16px;
   height: 40px;
   border-radius: 8px;
@@ -1709,26 +1699,9 @@ _flex-column {
   font-weight: bold;
   cursor: pointer;
   border: none;
-}
-
-.temporario-submit-make-account {
-  background-color: var(--main-color);
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  height: 40px;
-  border: none;
-  border-radius: 8px;
   width: 100%;
-  text-align: center;
-  text-decoration: none;
-  line-height: 40px;
-  margin-bottom: 16px;
-  transition: 0.2s;
-}
-
-.temporario-submit-make-account:hover {
-  box-shadow: 0 0 3px 0 #b1b1b1;
+  padding: 12px;
+  border-radius: 8px;
 }
 
 .form p {
