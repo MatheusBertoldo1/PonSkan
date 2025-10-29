@@ -1196,15 +1196,15 @@ _flex-column {
 }
 
 .part2 div:nth-child(1)::after {
-  content: "Detecção Inteligente";
+  content: "Loren Ipsun";
 }
 
 .part2 div:nth-child(2)::after {
-  content: "Tecnolgia aplicada à Agricultura";
+  content: "Loren Ipsun";
 }
 
 .part2 div:nth-child(3)::after {
-  content: "Qualidade Garantida";
+  content: "Loren Ipsun";
 }
 
 .part2 div:nth-child(4)::after {
@@ -1472,7 +1472,7 @@ _flex-column {
   background-color: #c8f2ff;
 }
 
-.svg img {
+.svg svg {
   width: 40px;
   height: 40px;
 }
@@ -1606,6 +1606,38 @@ _flex-column {
 
 .form-login p a {
   color: var(--main-color);
+}
+
+.analisys-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.analisys-content h1 {
+  font-size: 32px;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.analisys-content p {
+  color: var(--text-color);
+  margin: 0;
+}
+
+.analisys-content a {
+  width: 300px;
+  border-radius: 8px;
+  background-color: var(--main-color);
+  text-align: center;
+  color: #fff;
+  padding: 12px 0;
+  margin-top: 16px;
+  text-decoration: none;
 }
 
 .container-form-make-account {
