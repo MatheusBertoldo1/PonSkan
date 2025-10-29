@@ -1,0 +1,25 @@
+@use '../abstracts/variables' as var;
+
+.analisys-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.title-analysis{
+    font-size: 32px;
+    color: var.$tetx-color;
+}
+
+.analisys-content p{
+    color: var.$tetx-color;
+}
+
+.title-analysis a{
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: var.$main-color;
+    color: #fff;
+}
