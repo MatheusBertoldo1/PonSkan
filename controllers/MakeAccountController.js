@@ -12,8 +12,13 @@ router.get('/make-account', (_req, res) =>{
 router.post('/make-account/create', async (req, res)=>{
     const {firstName, lastName, mail, password, phone, zone, city, uf} = req.body
 
-    await CreateUser({firstName, lastName, mail, phone, password, zone, city, uf})
-    res.redirect('/home/')
+    const currentUserId = await CreateUser({
+        firstName, lastName, mail, phone, password, zone, city, uf
+    })
+
+    req.session.idUser = currentUserId
+
+    res.redirect('/home/?' + currentUserId)
 })
 
 export default router

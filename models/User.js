@@ -86,8 +86,9 @@ const DeleteUser = async (id) =>{
 }
 
 const CreateUser = async ({firstName, lastName, mail, password, phone, zone, city, uf}) => {
+
     try {
-        await User.create({
+        const userCreated= await User.create({
             firstName, 
             lastName, 
             mail, 
@@ -97,11 +98,13 @@ const CreateUser = async ({firstName, lastName, mail, password, phone, zone, cit
             city, 
             uf
         })    
+
+        return userCreated.id
     } 
     catch (error) {
         console.log(error)
         throw new Error('Erro ao criar usuário')
-    }
+    }   
 }
 
-export {GetUser, UpdateUser, DeleteUser, CreateUser}
+export {GetUser, UpdateUser, DeleteUser, CreateUser, User}

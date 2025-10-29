@@ -1,0 +1,80 @@
+CREATE DATABASE ponskan;
+
+USE ponskan;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    firstName VARCHAR(255) NOT NULL,
+    lastName VARCHAR(255) NOT NULL,
+    mail VARCHAR(255) NOT NULL,
+    phone VARCHAR(255) NOT NULL,
+    PASSWORD VARCHAR(255) NOT NULL,
+    zone VARCHAR(255) NOT NULL,
+    city VARCHAR(255) NOT NULL,
+    uf VARCHAR(255) NOT NULL,
+    createdAt DATETIME NOT NULL,
+    updatedAt DATETIME NOT NULL,
+    PRIMARY KEY (id)
+);
+ 
+INSERT INTO users (firstName, lastName, mail, phone, PASSWORD, zone, city, uf, createdAt, updatedAt) VALUES
+(
+    'João', 
+    'Silva', 
+    'joao.silva@email.com', 
+    '(11) 98765-4321', 
+    '1234',
+    'Centro', 
+    'São Paulo', 
+    'SP', 
+    NOW(), -- Ou um timestamp como '2025-10-25 10:00:00'
+    NOW()
+),
+(
+    'Maria', 
+    'Oliveira', 
+    'maria.o@email.com', 
+    '(21) 99887-7654', 
+    '1234',
+    'Copacabana', 
+    'Rio de Janeiro', 
+    'RJ', 
+    NOW(),
+    NOW()
+),
+(
+    'Pedro', 
+    'Santos', 
+    'pedro.santos@email.com', 
+    '(31) 97654-3210', 
+    '1234',
+    'Savassi', 
+    'Belo Horizonte', 
+    'MG', 
+    NOW(),
+    NOW()
+),
+(
+    'Ana', 
+    'Ferreira', 
+    'ana.ferreira@email.com', 
+    '(81) 95544-3322', 
+    '1234',
+    'Boa Viagem', 
+    'Recife', 
+    'PE', 
+    NOW(),
+    NOW()
+),
+(
+    'Lucas', 
+    'Souza', 
+    'lucas.souza@email.com', 
+    '(41) 93322-1100', 
+    '1234',
+    'Batel', 
+    'Curitiba', 
+    'PR', 
+    NOW(),
+    NOW()
+);

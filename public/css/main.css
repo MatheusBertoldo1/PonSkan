@@ -1196,15 +1196,15 @@ _flex-column {
 }
 
 .part2 div:nth-child(1)::after {
-  content: "Loren Ipsun";
+  content: "Detecção Inteligente";
 }
 
 .part2 div:nth-child(2)::after {
-  content: "Loren Ipsun";
+  content: "Tecnolgia aplicada à Agricultura";
 }
 
 .part2 div:nth-child(3)::after {
-  content: "Loren Ipsun";
+  content: "Qualidade Garantida";
 }
 
 .part2 div:nth-child(4)::after {

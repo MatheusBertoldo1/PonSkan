@@ -3,9 +3,12 @@ import { GetUser } from "../models/User.js"
 
 const router = express.Router()
 
-router.get('/home', async (_req, res) => {
+
+router.get('/home', async (req, res) => {
+    const idUser = req.session.idUser
+
     try{
-        const user = await GetUser(1)
+        const user = await GetUser(idUser)
         res.render('home', {
             currentPage: 'home',
             user: user

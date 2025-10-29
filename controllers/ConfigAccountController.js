@@ -2,11 +2,12 @@ import express from 'express'
 import { DeleteUser, GetUser, UpdateUser } from '../models/User.js'
 
 const router = express.Router()
-const id = 1;
 
-router.get('/config-account', async (_req, res) => {
+router.get('/config-account', async (req, res) => {
+    const idUser = req.session.idUser
+    
     try {
-        const user = await GetUser(id)
+        const user = await GetUser(idUser)
 
         res.render('config-account', {
             currentPage:  "config-account",
@@ -20,15 +21,18 @@ router.get('/config-account', async (_req, res) => {
 
 router.post('/config-account/update/',  async (req, res)=> {
     const {firstName, lastName, mail, password, phone, zone, city, uf} = req.body
+    const idUser = req.session.idUser
 
-    await UpdateUser(id, {firstName, lastName, mail, password, phone, zone, city, uf})
+
+    await UpdateUser(idUser, {firstName, lastName, mail, password, phone, zone, city, uf})
     res.redirect('/config-account/')
 
 })
 
 router.post('/config-account/delete', async (req, res) =>{
+    const idUser = req.session.idUser
     
-    await DeleteUser(id)
+    await DeleteUser(idUser)
     res.redirect('/')
 })
 

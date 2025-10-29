@@ -1,3 +1,6 @@
+// 1. Importa a biblioteca
+import session from 'express-session'; 
+
 // Importando o Express com ES6 Modules
 import express from "express"
 
@@ -7,6 +10,7 @@ import connection from "./config/sequelize-config.js"
 // Iniciando o Express na variável app
 const app = express()
 
+
 // Configurando o express para permitir o recebimento de dados vindos de formulários
 app.use(express.urlencoded({extended: false}))
 
@@ -15,6 +19,18 @@ app.set("view engine", "ejs")
 
 // Define o uso da pasta "public" para uso de arquivos estáticos
 app.use(express.static("public"))
+
+// Configuração do Middleware de Sessão
+app.use(session({
+    secret: '1234', // Chave secreta para assinar o cookie
+    resave: false,                                    // Evita salvar a sessão se não foi modificada
+    saveUninitialized: false,                         // Evita criar sessões para usuários não logados
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24, // Duração do cookie: 24 horas (em milissegundos)
+        secure: process.env.NODE_ENV === 'production', // Use 'true' em produção (exige HTTPS)
+        httpOnly: true                                // Impede acesso via JavaScript (segurança)
+    }
+}));
 
 // Iniciando o servidor
 const port = 8080;
@@ -35,9 +51,6 @@ connection.authenticate().then(() => {
 
 // Criando o banco de dados (se ele ainda não existir)
 connection.query(`create database if not exists ponskan`).then(() => console.log("Banco criado")).catch(error => console.log(error))
-
-// Importando os models
-import {GetUser} from "./models/User.js"
 
 // Definindo a rota principal
 app.get("/", function (_req, res) {
@@ -63,3 +76,4 @@ app.use('/', MapController)
 app.use('/', HelpController)
 app.use('/', AnalysisController)
 app.use('/', Reports)
+
