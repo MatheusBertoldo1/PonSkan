@@ -1,24 +1,61 @@
 @use '../abstracts/variables' as var;
 
-.title-page-reports h1{
+.title-page-reports{
+    display: flex;
+    align-items: center;
+}
+
+.title-page-wrapper{
+    width: fit-content;
+}
+
+.title-page-wrapper h1{
     color: var.$text-color;
     margin-bottom: 0;    
     font-weight: 500;
 }
 
-.title-page-reports p{
+.title-page-wrapper p{
     color: var.$text-color;
     margin-top: 0;    
 }
 
+.export-doc-wrapper{
+    display: flex;
+    justify-content: right;
+    flex-grow: 1;
+    padding: 0 16px;
+}
+
+.export-doc-wrapper p{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var.$main-color;
+    color: #fff;
+    border-radius: 16px;
+    padding: 8px 24px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.export-doc-wrapper p:hover{
+    box-shadow: 0 0 3px 0 #00000041;
+}
+
+.export-doc-wrapper p svg, .export-doc-wrapper p svg path{
+    width: 24px;
+    height: 24px;
+    stroke: #fff;
+}
 
 // SESSÃO SELEÇÃO DE RELATÓRIOS
-.data-reports-session{
+.data-reports-section{
     display: flex;
     flex-direction: column;
 }
 
-.data-reports-session hr{
+.data-reports-section hr{
     border: 3px solid var.$main-color;
     border-radius: 8px;
     background-color: var.$main-color;;
@@ -79,7 +116,7 @@
 }
 
 // SESSÃO DE IMAGENS ENVIADAS
-.send-images-session{
+.send-images-section{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -97,11 +134,6 @@
     flex-wrap: wrap;
 }
 
-.send-images-session p{
-    color: var.$text-color; 
-    margin: 0;
-}
-
 .send-image{
     width: 120px;
     height: 120px;
@@ -110,15 +142,16 @@
 }
 
 // SESSÃO DE PROBABILIDADE
-.probability-session{
+.probability-section{
     padding: 32px 0 0 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.probability-session p{
-    color: var.$text-color;
+.title-section-reports{
+    font-size: 18px;
+    color: var.$text-color50;
     margin: 0;
 }
 
@@ -129,17 +162,33 @@
 }
 
 .probability-graphic{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     flex-grow: 1;
     min-width: 250px;
+    height: 280px;
     background-color: #fff;
     border-radius: 16px;
-    height: 300px;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+.probability-graphic p{
+    color: var.$text-color50;
+    font-weight: 500;
+}
+
+.probability-graphic p:nth-child(1){
+    font-weight: 600;
+    color: var.$text-color50;
 }
 
 .total-probability{
-    background-color: var.$main-color;
-    border-radius: 8px;
-    padding: 16px;
+    background-color: #f39600;
+    border-radius: 20px;
+    padding: 4px 16px;
 }
 
 .total-probability p{
@@ -150,17 +199,12 @@
     font-weight: 600;
 }
 
-// LOCATION SESSION
+// LOCATION section
 .location{
     display: flex;
     flex-direction: column;
     gap: 12px;
     padding: 32px 0;
-}
-
-.location p{
-    color: var.$text-color;
-    margin: 0;
 }
 
 .location-wrapper{
@@ -186,14 +230,57 @@
 }
 
 .lat-long h3{
-    color: var.$text-color;
-    font-weight: 500;
+    color: var.$text-color50;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .lat-long p{
-    color: var.$text-color;
+    color: var.$text-color50;
+    border-radius: 16px;
+    width: fit-content;
+    margin-bottom: 16px;
+    cursor: pointer;
 }
 
+// SESSÃO PLANO DE AÇÃO
+.action-plan-section{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.action-plan-wrapper{
+    display: flex;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 16px;
+    align-items: center;
+    gap: 16px;
+}
+
+.emphasis-action-plan{
+    background-color: var.$main-color;
+    border-radius: 999;
+    height: 80px;
+    width: 8px;
+    border-radius: 999px;
+}
+
+.action-plan-content{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.action-plan-content p{
+    color: var.$text-color50;
+    margin: 0;
+}
+
+
+// MEDIA
 @media (max-width: 420px){
     .send-images-wrapper{
         justify-content: center;
