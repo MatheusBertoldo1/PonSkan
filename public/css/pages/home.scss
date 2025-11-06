@@ -24,26 +24,27 @@
     margin-bottom: 64px;
 }
 
-.info-banner div{
+.cta-info-banner{
     max-width: 700px;
     flex-grow: 2;
     padding: 32px;
     color: #fff;
 }
 
-.info-banner h1{
+.cta-info-banner h1{
     margin-top: 0;
 }
 
-.info-banner p{
+.cta-info-banner p{
     margin-top: 24px;
     line-height: 24px;
 }
 
 .img-info-banner{
     display: flex;
-    justify-content: right;
     flex-grow: 1;
+    justify-content: center;
+    align-items: center;
 }
 
 

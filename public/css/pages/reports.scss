@@ -1,0 +1,201 @@
+@use '../abstracts/variables' as var;
+
+.title-page-reports h1{
+    color: var.$text-color;
+    margin-bottom: 0;    
+    font-weight: 500;
+}
+
+.title-page-reports p{
+    color: var.$text-color;
+    margin-top: 0;    
+}
+
+
+// SESSÃO SELEÇÃO DE RELATÓRIOS
+.data-reports-session{
+    display: flex;
+    flex-direction: column;
+}
+
+.data-reports-session hr{
+    border: 3px solid var.$main-color;
+    border-radius: 8px;
+    background-color: var.$main-color;;
+}
+
+.data-reports-wrapper{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    padding: 8px;
+    gap: 16px;
+}
+
+.data-reports-wrapper::-webkit-scrollbar{
+    background: none;
+}
+
+.data-reports:not(.selected){
+    padding: 4px 16px;
+    border-radius: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: .2s;
+    min-width: fit-content;
+}
+
+.data-reports.selected{
+    background-color: var.$main-color;
+    cursor: pointer;
+    transition: .2s;
+    padding: 4px 16px;
+    border-radius: 16px;
+}
+
+.data-reports.selected p{
+    white-space: nowrap;
+    color: #fff;
+    margin: 12px 16px 12px 16px;
+}
+
+.data-reports.selected p span{
+    color: #fff;
+    font-weight: 400;
+}
+
+.data-reports:hover{
+    box-shadow: 0 0 4px 0 #0000001e;
+}
+
+.data-reports p{
+    color: var.$text-color50;
+    margin: 12px 16px 12px 16px;
+}
+
+.data-reports p span{
+    color: var.$text-color50;
+    font-weight: 600;
+}
+
+// SESSÃO DE IMAGENS ENVIADAS
+.send-images-session{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    padding: 32px 0 0 0;
+}
+
+.send-images-wrapper{
+    padding: 12px;
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    background-color: #fff;
+    border-radius: 16px;
+    flex-wrap: wrap;
+}
+
+.send-images-session p{
+    color: var.$text-color; 
+    margin: 0;
+}
+
+.send-image{
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    background-color: #ededed;
+}
+
+// SESSÃO DE PROBABILIDADE
+.probability-session{
+    padding: 32px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.probability-session p{
+    color: var.$text-color;
+    margin: 0;
+}
+
+.probability-wrapper{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.probability-graphic{
+    flex-grow: 1;
+    min-width: 250px;
+    background-color: #fff;
+    border-radius: 16px;
+    height: 300px;
+}
+
+.total-probability{
+    background-color: var.$main-color;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.total-probability p{
+    color: #fff;
+}
+
+.total-probability p span{
+    font-weight: 600;
+}
+
+// LOCATION SESSION
+.location{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 32px 0;
+}
+
+.location p{
+    color: var.$text-color;
+    margin: 0;
+}
+
+.location-wrapper{
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    gap: 16px;
+}
+
+.map{
+    width: 300px;
+    height: 300px;
+    border-radius: 16px;
+    background-color: #ededed;
+    background-image: url('/imgs/map.png');
+    background-size: cover;
+}
+
+.lat-long{
+    flex-grow: 1;
+}
+
+.lat-long h3{
+    color: var.$text-color;
+    font-weight: 500;
+}
+
+.lat-long p{
+    color: var.$text-color;
+}
+
+@media (max-width: 420px){
+    .send-images-wrapper{
+        justify-content: center;
+    }
+}

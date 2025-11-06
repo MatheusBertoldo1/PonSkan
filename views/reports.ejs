@@ -2,8 +2,85 @@
 
 <div class="dashboard-wrapper">
     <%- include('partials/navbar-side.ejs') %>
-    <main class="dashboard-content">
-        <h1 class="_justify-center _align-center _font-size-96 _color-gray">Em breve</h1>
+    <main class="dashboard-content">        
+        <header class="title-page-reports">
+            <h1>Meus relatórios</h1>
+            <p>Veja o resultado das análises</p>
+        </header>
+
+        <section class="data-reports-session">
+            <div class="data-reports-wrapper">
+                <div class="data-reports">
+                    <p><span>Data da análise:</span> xx/xx/xxxx</p>
+                    <p>4 imagens enviadas</p>
+                </div>
+
+                <div class="data-reports selected">
+                    <p><span>Data da análise:</span> xx/xx/xxxx</p>
+                    <p>4 imagens enviadas</p>
+                </div>
+                
+                <div class="data-reports">
+                    <p><span>Data da análise:</span> xx/xx/xxxx</p>
+                    <p>4 imagens enviadas</p>
+                </div>
+
+                <div class="data-reports">
+                    <p><span>Data da análise:</span> xx/xx/xxxx</p>
+                    <p>4 imagens enviadas</p>
+                </div>
+
+                <div class="data-reports">
+                    <p><span>Data da análise:</span> xx/xx/xxxx</p>
+                    <p>4 imagens enviadas</p>
+                </div>
+            </div>
+
+            <hr>
+        </section>
+
+        <section class="send-images-session">
+            <p>Imagens enviadas</p>
+            <div class="send-images-wrapper">
+                <div class="send-image"></div>
+                <div class="send-image"></div>
+                <div class="send-image"></div>
+                <div class="send-image"></div>  
+            </div>
+        </section>
+
+        <section class="probability-session">
+            <p>Probabilidade por características observadas</p>
+
+            <div class="probability-wrapper">
+                <div class="probability-graphic">
+
+                </div>
+                <div class="probability-graphic">
+
+                </div>
+                <div class="probability-graphic">
+
+                </div>
+            </div>
+
+            <div class="total-probability">
+                <p>Probabilidade média da Black Spot estar presente: <span>52,33%</span> </p>
+            </div>
+        </section>
+
+        <section class="location">
+            <p>Referência geográfica</p>
+            
+            <div class="location-wrapper">
+                <div class="map"></div>
+                <div class="lat-long">
+                    <h3>Localização aproximada</h3>
+                    <p>latitude: -22.185833</p>
+                    <p>longitude: -47.39</p>
+                </div>
+            </div>
+        </section>
     </main>
 </div>
 
