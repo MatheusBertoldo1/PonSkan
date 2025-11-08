@@ -1,9 +1,10 @@
 import express from 'express'
-import { DeleteUser, GetUser, UpdateUser} from './UserController.js'
+import { DeleteUser, GetUser, UpdateUser} from '../models/User.js'
+import Auth from '../middleware/Auth.js'  
 
 const router = express.Router()
 
-router.get('/config-account', async (req, res) => {
+router.get('/config-account', Auth, async (req, res) => {
     const idUser = req.session.idUser
     
     try {

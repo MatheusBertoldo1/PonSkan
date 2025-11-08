@@ -1,10 +1,11 @@
 import express from "express"
-import { GetUser } from './UserController.js'
+import { GetUser } from "../models/User.js"
+import Auth from '../middleware/Auth.js'  
 
 const router = express.Router()
 
 
-router.get('/home', async (req, res) => {
+router.get('/home', Auth, async (req, res) => {
     const idUser = req.session.idUser
 
     try{

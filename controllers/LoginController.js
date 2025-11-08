@@ -1,11 +1,10 @@
 import express from 'express'
-import User from '../models/User.js'
+import { User } from '../models/User.js'
 
 const router = express.Router()
 
-router.get('/login', (req, res) => {
+router.get('/login', (_req, res) => {
     res.render('login', {
-        message: req.flash(),
         currentPage: 'login'
     })
 })

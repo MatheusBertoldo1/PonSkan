@@ -1,7 +1,8 @@
 import express from 'express'
 const router = express.Router()
+import Auth from '../middleware/Auth.js'  
 
-router.get('/reports', (_req, res) =>{
+router.get('/reports', Auth, (_req, res) =>{
     res.render('reports', {
         currentPage: 'reports'
     })

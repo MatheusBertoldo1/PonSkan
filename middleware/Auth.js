@@ -1,5 +1,5 @@
 const Auth = (req, res, next) => {
-    const idUsuario = req.session.user
+    const idUsuario = req.session.idUser
 
     if(idUsuario != undefined){
         next()
