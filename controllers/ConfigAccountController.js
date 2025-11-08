@@ -1,5 +1,5 @@
 import express from 'express'
-import { DeleteUser, GetUser, UpdateUser } from '../models/User.js'
+import { DeleteUser, GetUser, UpdateUser} from './UserController.js'
 
 const router = express.Router()
 
@@ -14,7 +14,6 @@ router.get('/config-account', async (req, res) => {
             user: user
         })
     } catch (error) {
-        console.error("Erro na rota /configAccount", error)
         throw new Error('Erro com a busca de usuarios')
     }
 })
