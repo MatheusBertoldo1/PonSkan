@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/MatheusBertoldo1/PonSkan#readme",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "express-session": "^1.18.2",

@@ -4,6 +4,7 @@ import Auth from '../middleware/Auth.js'
 
 router.get('/analysis', Auth, (_req, res) =>{
     res.render('analysis', {
+        // Para alterar o css do link no menu que indica em qual pagina o usuário está
         currentPage: 'analysis'
     })
 })

@@ -1008,7 +1008,7 @@ _flex-column {
 }
 
 #exit-account:hover {
-  background-color: #fdeaea;
+  text-decoration: underline solid red;
 }
 
 @media (max-width: 600px) {
@@ -1609,6 +1609,50 @@ _flex-column {
   color: var(--main-color);
 }
 
+.login-messages {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ffebeb;
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation-name: ease-message;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+
+.login-messages svg,
+.login-messages svg path {
+  width: 24px;
+  height: 24px;
+  stroke: rgb(231, 8, 8);
+}
+
+.login-messages p {
+  margin: 0;
+  color: rgb(231, 8, 8);
+  text-align: center;
+}
+
+@keyframes ease-message {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .analisys-content {
   display: flex;
   justify-content: center;

@@ -107,4 +107,14 @@ const CreateUser = async ({firstName, lastName, mail, password, phone, zone, cit
     }   
 }
 
-export {GetUser, UpdateUser, DeleteUser, CreateUser, User}
+const FindOneUser = async (mail) => {
+    try{
+        const user = await User.findOne({where: {mail : mail}})
+        return user
+    }
+    catch(error){
+        throw new error("Erro ao buscar usuário")
+    }
+}
+
+export {GetUser, UpdateUser, DeleteUser, CreateUser, FindOneUser}

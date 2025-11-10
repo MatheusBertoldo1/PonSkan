@@ -4,9 +4,7 @@ const Auth = (req, res, next) => {
     if(idUsuario != undefined){
         next()
     }else{
-        res.render("login", {
-            loggedOut : true
-        })
+        res.redirect("/login")   
     }
 }
 export default Auth

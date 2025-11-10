@@ -1,32 +1,31 @@
 import express from 'express'
-import { User } from '../models/User.js'
+import { FindOneUser } from '../models/User.js'
+import bcrypt from 'bcrypt'
 
 const router = express.Router()
 
 router.get('/login', (_req, res) => {
     res.render('login', {
-        currentPage: 'login'
+        message: ''
     })
 })
 
 router.post('/login/login', async (req, res) =>{
     const {mail, password} = req.body
-
     
     try {
-        const user = await User.findOne({ where: { mail: mail } });
+        const user = await FindOneUser(mail);
+        const correct = bcrypt.compareSync(password, user.password)
 
-        if (!user) {
-            return res.redirect('/login')
+        if(!user || !correct){
+            res.render('login', {
+                message: "Usuário ou senha incorretos"
+            })
         }
+        
         else {
-            if(user.password === password){
-                req.session.idUser = user.id;
-                return res.redirect('/home')
-            }
-            else {
-                return res.redirect('/login')
-            }
+            req.session.idUser = user.id
+            return res.redirect('/home')
         }
     } 
     catch (error) {
@@ -34,5 +33,11 @@ router.post('/login/login', async (req, res) =>{
     }
 })
 
+// ROTA DE LOGOUT
+router.get('/logout', (req, res) =>{
+    req.session.idUser = undefined
+
+    res.redirect('/')
+})
 
 export default router

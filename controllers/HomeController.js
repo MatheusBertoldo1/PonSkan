@@ -11,6 +11,7 @@ router.get('/home', Auth, async (req, res) => {
     try{
         const user = await GetUser(idUser)
         res.render('home', {
+            // Para alterar o css do link no menu que indica em qual pagina o usuário está
             currentPage: 'home',
             user: user
         })
